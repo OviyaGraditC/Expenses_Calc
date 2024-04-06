@@ -1,0 +1,22 @@
+
+<div class="container mt-4">
+	<h2>User Login</h2>
+	<div class="row">
+		<div class="col">UserName:</div>
+		<div class="col"><input type="text" id="user" name="user" [(ngModel)]="userName" class="form-control"/></div>
+	</div>
+	<div class="row mt-4">
+		<div class="col">Password:</div>
+		<div class="col"><input type="password" class="form-control" [(ngModel)]="pswd" id="pswd" name="pswd"/></div>
+	</div>
+	<div class="row mt-4">
+		<div class="col"></div>
+		<div class="col">
+			<button type="button" class="btn btn-success" (click)="checkLogin()">Login</button>
+		</div>
+	</div>
+	<div class="row mt-4">
+		<div class="col">{{msg}}</div>
+	</div>
+	
+</div>
