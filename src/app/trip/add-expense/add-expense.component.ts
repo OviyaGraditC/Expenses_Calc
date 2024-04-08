@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-expense',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AddExpenseComponent {
 
+  constructor(private router: Router){}
+
+  addParticipant : string = '/addParticipant';
+
+  redirectToViewExpense(){
+    this.router.navigate(['/viewExpense']);
+  }
 }
