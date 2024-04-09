@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './add-expense.component.html',
   styleUrls: ['./add-expense.component.scss']
 })
-export class AddExpenseComponent {
+export class AddExpenseComponent{
 
   constructor(private router: Router){}
 

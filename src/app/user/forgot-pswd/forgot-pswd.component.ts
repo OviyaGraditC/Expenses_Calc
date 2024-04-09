@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./forgot-pswd.component.scss']
 })
 export class ForgotPswdComponent {
-
+  forget_userName: string = "";
+  msg : string = "";
 }

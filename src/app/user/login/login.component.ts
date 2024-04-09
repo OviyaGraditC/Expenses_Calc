@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit{
   constructor(private sessionService: SessionService, private router: Router){}
 
   checkLogin(){
+    
     if(this.userName == "Dinesh" && this.pswd == "123"){
       this.msg = "Success";
       this.sessionService.setSession("User", this.userName);
