@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-expense.component.scss']
 })
 export class AddExpenseComponent{
-
+item_name : string ="";
+exp_category : string = "";
+  exp_amount : string = "";
+  exp_date : string = "";
+  
   constructor(private router: Router){}
 
   addParticipant : string = '/addParticipant';

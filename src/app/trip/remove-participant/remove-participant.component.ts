@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./remove-participant.component.scss']
 })
 export class RemoveParticipantComponent {
-
+  remove_participant : string = "";
 }

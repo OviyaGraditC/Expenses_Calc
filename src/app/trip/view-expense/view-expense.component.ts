@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-expense.component.scss']
 })
 export class ViewExpenseComponent {
-
+  addParticipant : string = "/addParticipant";
+  addExpense : string = "/addExpense";
 }

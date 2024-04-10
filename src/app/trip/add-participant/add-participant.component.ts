@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-participant.component.scss']
 })
 export class AddParticipantComponent {
+  add_participant : string = "";
 
+  
 }
