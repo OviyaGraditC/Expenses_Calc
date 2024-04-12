@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './user/login/login.component';
+// import { LoginComponent } from './user/login/login.component';
+import  { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { ForgotPswdComponent } from './user/forgot-pswd/forgot-pswd.component';
@@ -9,8 +10,9 @@ import { AddParticipantComponent } from './trip/add-participant/add-participant.
 import { RemoveParticipantComponent } from './trip/remove-participant/remove-participant.component';
 import { ViewExpenseComponent } from './trip/view-expense/view-expense.component';
 
-const routes: Routes = [
+const routes: Routes = [  
   {path:'', component:LoginComponent},
+  {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'logout', component:LogoutComponent},
   {path: 'forgotPswd', component:ForgotPswdComponent},
@@ -25,3 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// 

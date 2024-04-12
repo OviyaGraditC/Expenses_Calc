@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { GlobalConstant } from 'src/app/common/global.constant';
 import { SessionService } from 'src/app/services/session.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit{
   userName: string = "";
   pswd: string = "";
   msg : string = "";
+  
 
   ngOnInit(): void {
 
@@ -26,13 +27,13 @@ export class LoginComponent implements OnInit{
 
   checkLogin(){
     let isSuccess = false;
-    let apiUrl = "https://retoolapi.dev/EYB0o0/expenseCalcLogin" + "?username=" + this.userName + "&password=" + this.pswd;
+    let apiUrl = GlobalConstant.userApiURL + "?username=" + this.userName + "&password=" + this.pswd;
     this.httpClient.get(apiUrl).subscribe(
       (users: any)=>{
         console.log(users);        
           if(users && users.length > 0 && users[0].username == this.userName && users[0].password == this.pswd){
-            this.sessionService.setSession("User", this.userName);
-            this.router.navigate(['/addExpense']);
+            this.sessionService.setSession(GlobalConstant.userSession, this.userName);
+            this.router.navigate([GlobalConstant.addExpenseRoute]);
           }else{
             this.msg = "Failed";
           }
