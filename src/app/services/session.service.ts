@@ -24,6 +24,10 @@ export class SessionService {
     }
   }
 
+  getUserSession(){
+    return sessionStorage.getItem(GlobalConstant.userSession) || '';
+  }
+
   setSession(ssKey: string, ssValue:string) : void{
     sessionStorage.setItem(ssKey, ssValue);
   }

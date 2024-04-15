@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GlobalConstant } from 'src/app/common/global.constant';
+import { ApiService } from 'src/app/services/api.service';
 import { SessionService } from 'src/app/services/session.service';
 
 @Component({
@@ -23,12 +24,11 @@ export class LoginComponent implements OnInit{
 
   constructor(private sessionService: SessionService, 
               private router: Router,
-              private httpClient: HttpClient){}
+              private apiService: ApiService){}
 
   checkLogin(){
     let isSuccess = false;
-    let apiUrl = GlobalConstant.userApiURL + "?username=" + this.userName + "&password=" + this.pswd;
-    this.httpClient.get(apiUrl).subscribe(
+    this.apiService.getLoginUser(this.userName, this.pswd).subscribe(
       (users: any)=>{
         console.log(users);        
           if(users && users.length > 0 && users[0].username == this.userName && users[0].password == this.pswd){

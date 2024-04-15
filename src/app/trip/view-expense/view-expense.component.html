@@ -7,19 +7,19 @@
 
 <table class="table" style="font-size: 20px">
     <tr>
-        <th>Item id</th>
         <th>Item Name</th>
         <th>Item category</th>
         <th>Amount</th>
         <th>expense Date</th>
         <th>Action</th>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr *ngFor="let expense of expenses">
+        <td>{{expense.itemName}}</td>
+        <td>{{expense.category}}</td>
+        <td>{{expense.amount}}</td>
+        <td>{{expense.expDate}}</td>
+        <td>
+            <button type="button" class="btn btn-danger" (click)="deleteExpense(expense)">Delete</button>
+        </td>
     </tr>
 </table>

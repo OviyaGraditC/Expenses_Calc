@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // import { LoginComponent } from './user/login/login.component';
-import  { LoginComponent } from './user/login/login.component';
+import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 import { LogoutComponent } from './user/logout/logout.component';
 import { ForgotPswdComponent } from './user/forgot-pswd/forgot-pswd.component';
@@ -15,11 +15,11 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'logout', component:LogoutComponent},
-  {path: 'forgotPswd', component:ForgotPswdComponent},
+  {path:'forgotPswd', component:ForgotPswdComponent},
   {path:'addExpense', component:AddExpenseComponent},
   {path:'addParticipant', component:AddParticipantComponent},
-  {path: 'removeParticipant', component:RemoveParticipantComponent},
-  {path: 'viewExpense', component:ViewExpenseComponent}
+  {path:'removeParticipant', component:RemoveParticipantComponent},
+  {path:'viewExpense', component:ViewExpenseComponent}
 ];
 
 @NgModule({
