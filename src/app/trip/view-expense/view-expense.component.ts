@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalConstant } from 'src/app/common/global.constant';
 import { ApiService } from 'src/app/services/api.service';
 import { SessionService } from 'src/app/services/session.service';
 
@@ -11,6 +12,7 @@ export class ViewExpenseComponent implements OnInit{
   addParticipant : string = "/addParticipant";
   addExpense : string = "/addExpense";
   expenses : any[] = [];
+  userLgType : string = "";
 
   constructor(private apiService: ApiService,
               private sessionService: SessionService
@@ -20,7 +22,8 @@ export class ViewExpenseComponent implements OnInit{
     this.viewExpenseDetails();
   }
 
-  viewExpenseDetails(){    
+  viewExpenseDetails(){  
+    this.userLgType = this.sessionService.getSession(GlobalConstant.userLgType) || "";
     this.apiService.getExpenseApi(this.sessionService.getUserSession()).subscribe(
       (response : any)=>{
         this.expenses = response;
@@ -32,6 +35,11 @@ export class ViewExpenseComponent implements OnInit{
   }
 
   deleteExpense(expense:any){
+    console.log(expense);
+  }
+
+  updateExpense(expense:any){
+    console.log("Update Expense");
     console.log(expense);
   }
 }

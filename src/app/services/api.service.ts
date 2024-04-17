@@ -40,4 +40,8 @@ export class ApiService {
     return this.getApi(apiUrl);
   }
 
+  registerUserApi(user:any){
+    return this.httpClient.post(GlobalConstant.userApiURL, user);
+  }
+
 }

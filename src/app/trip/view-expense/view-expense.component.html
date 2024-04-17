@@ -18,8 +18,11 @@
         <td>{{expense.category}}</td>
         <td>{{expense.amount}}</td>
         <td>{{expense.expDate}}</td>
-        <td>
-            <button type="button" class="btn btn-danger" (click)="deleteExpense(expense)">Delete</button>
+        <td *ngIf='userLgType == "M" || userLgType=="A"'>
+            <button type="button" class="btn btn-warning" (click)="updateExpense(expense)">Update</button>
+        </td>
+        <td *ngIf="userLgType=='A'">
+            <button type="button" class="btn btn-warning" (click)="deleteExpense(expense)">Delete</button>
         </td>
     </tr>
 </table>

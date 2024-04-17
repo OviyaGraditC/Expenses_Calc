@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit{
         console.log(users);        
           if(users && users.length > 0 && users[0].username == this.userName && users[0].password == this.pswd){
             this.sessionService.setSession(GlobalConstant.userSession, this.userName);
+            this.sessionService.setSession(GlobalConstant.userLgType, users[0].lgtype);
             this.router.navigate([GlobalConstant.addExpenseRoute]);
           }else{
             this.msg = "Failed";
@@ -42,7 +43,8 @@ export class LoginComponent implements OnInit{
         console.log(err);
       }
     );
-
+  }
+}
 
 
 //   this.httpClient.get("https://retoolapi.dev/EYB0o0/expenseCalcLogin").subscribe(
@@ -77,6 +79,4 @@ export class LoginComponent implements OnInit{
     // else{
     //   this.msg = "Failed";
     // }
-  }
-
-}
+ 
