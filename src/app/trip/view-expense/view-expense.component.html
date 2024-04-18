@@ -13,9 +13,13 @@
         <th>expense Date</th>
         <th>Action</th>
     </tr>
-    <tr *ngFor="let expense of expenses">
+    <tr *ngFor="let expense of expenses" [ngSwitch]="expense.category">
         <td>{{expense.itemName}}</td>
-        <td>{{expense.category}}</td>
+        <td *ngSwitchCase="'Drink'"><span class="badge bg-success">{{expense.category}}</span></td>
+        <td *ngSwitchCase="'Juice'"><span class="badge bg-primary">{{expense.category}}</span></td>
+        <td *ngSwitchCase="'Ice'"><span class="badge bg-secondary">{{expense.category}}</span></td>
+        <td *ngSwitchCase="'Snack'"><span class="badge bg-info">{{expense.category}}</span></td>
+        <td *ngSwitchDefault><span class="badge bg-danger">{{expense.category}}</span></td>
         <td>{{expense.amount}}</td>
         <td>{{expense.expDate}}</td>
         <td *ngIf='userLgType == "M" || userLgType=="A"'>
@@ -25,4 +29,5 @@
             <button type="button" class="btn btn-warning" (click)="deleteExpense(expense)">Delete</button>
         </td>
     </tr>
+
 </table>
