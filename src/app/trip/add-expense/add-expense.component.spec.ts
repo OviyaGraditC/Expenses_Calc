@@ -20,4 +20,8 @@ describe('AddExpenseComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call addExpense', () => {
+    expect(component.addExpense).toHaveBeenCalled();
+  });
 });

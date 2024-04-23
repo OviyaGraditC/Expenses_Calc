@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GlobalConstant } from 'src/app/common/global.constant';
 import { ApiService } from 'src/app/services/api.service';
 import { SessionService } from 'src/app/services/session.service';
@@ -13,6 +13,8 @@ export class ViewExpenseComponent implements OnInit{
   addExpense : string = "/addExpense";
   expenses : any[] = [];
   userLgType : string = "";
+
+  @Input() count : number=0;
 
   constructor(private apiService: ApiService,
               private sessionService: SessionService

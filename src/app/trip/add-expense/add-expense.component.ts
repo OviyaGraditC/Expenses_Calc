@@ -13,6 +13,8 @@ item_name : string ="";
 exp_category : string = "";
   exp_amount : string = "";
   exp_date : string = "";
+
+  addedCount : number = 0;
   
   constructor(private router: Router, 
               private sessionService : SessionService,
@@ -26,7 +28,7 @@ exp_category : string = "";
 
 
   addExpense(){
-
+    this.addedCount = 5;
     let expenseReq = {
       "amount": this.exp_amount,
       "expDate": this.exp_date,
