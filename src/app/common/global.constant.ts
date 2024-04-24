@@ -12,6 +12,7 @@ export class GlobalConstant{
     static userLgType = "userLgType";
 
     static addExpenseRoute = '/addExpense';
+    static tripsRoute = '/trips';
 
     static sessionRemoveMsg = " : Session Removed Successfuly";
 }

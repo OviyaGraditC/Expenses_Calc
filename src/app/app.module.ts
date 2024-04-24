@@ -12,8 +12,10 @@ import { RemoveParticipantComponent } from './trip/remove-participant/remove-par
 import { AddExpenseComponent } from './trip/add-expense/add-expense.component';
 import { ViewExpenseComponent } from './trip/view-expense/view-expense.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTripComponent } from './trip/add-trip/add-trip.component';
+import { ViewTripsComponent } from './trip/view-trips/view-trips.component';
 
 
 @NgModule({
@@ -26,14 +28,17 @@ import { HttpClientModule } from '@angular/common/http';
     AddParticipantComponent,
     RemoveParticipantComponent,
     AddExpenseComponent,
-    ViewExpenseComponent
+    ViewExpenseComponent,
+    AddTripComponent,
+    ViewTripsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

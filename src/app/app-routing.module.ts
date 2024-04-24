@@ -9,6 +9,8 @@ import { AddExpenseComponent } from './trip/add-expense/add-expense.component';
 import { AddParticipantComponent } from './trip/add-participant/add-participant.component';
 import { RemoveParticipantComponent } from './trip/remove-participant/remove-participant.component';
 import { ViewExpenseComponent } from './trip/view-expense/view-expense.component';
+import { AddTripComponent } from './trip/add-trip/add-trip.component';
+import { ViewTripsComponent } from './trip/view-trips/view-trips.component';
 
 const routes: Routes = [  
   {path:'', component:LoginComponent},
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'addExpense', component:AddExpenseComponent},
   {path:'addParticipant', component:AddParticipantComponent},
   {path:'removeParticipant', component:RemoveParticipantComponent},
-  {path:'viewExpense', component:ViewExpenseComponent}
+  {path:'viewExpense', component:ViewExpenseComponent},
+  {path:'addTrip', component:AddTripComponent},
+  {path:'trips', component:ViewTripsComponent},
 ];
 
 @NgModule({

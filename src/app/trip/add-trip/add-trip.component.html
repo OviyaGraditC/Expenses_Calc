@@ -1,0 +1,41 @@
+<p>add-trip works!</p>
+
+
+<div class="container">
+    <form [formGroup]="addTripForm" (ngSubmit)="onFormSubmit()">
+        <div class="row mt-4">
+            <div class="col">Trip Name *</div>
+            <div class="col">
+                <input type="text" class="form-control" formControlName="tripName" name="tripName" id="tripName"/>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">Trip Description</div>
+            <div class="col">
+                <input type="text" class="form-control" formControlName="tripDescription" name="tripDescription" id="tripDescription"/>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">Trip Initial Amount*</div>
+            <div class="col">
+                <input type="text" class="form-control" formControlName="plannedBudget" name="plannedBudget" id="plannedBudget"/>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">Trip Member Count</div>
+            <div class="col">
+                <input type="number" class="form-control" formControlName="tripMemberCount" name="tripMemberCount" id="tripMemberCount"/>
+                <br>
+                <span *ngIf="addTripForm.controls.tripMemberCount.errors"> 
+                    <span class="text-danger">Maximum allowed Members are 10</span>
+                </span>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <input type="submit" value="Add Trip" class="btn btn-success" [disabled]="!addTripForm.valid"/>
+            </div>
+        </div>
+    </form>
+</div>
