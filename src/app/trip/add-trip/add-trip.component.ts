@@ -23,7 +23,6 @@ export class AddTripComponent implements OnInit{
   }
 
   onFormSubmit(){
-    console.log(this.addTripForm);
-    
+    console.log(this.addTripForm); console.log(this.addTripForm); console.log(this.addTripForm);    
   }
 }
