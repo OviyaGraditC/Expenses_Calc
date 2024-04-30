@@ -9,5 +9,4 @@ export class PowerPipe implements PipeTransform{
     transform(value: any,pow: any):number {
         return Math.pow(value, pow);
     }
-
 }
