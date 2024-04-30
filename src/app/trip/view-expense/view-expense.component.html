@@ -14,6 +14,10 @@
         <th>Action</th>
     </tr>
     <tr *ngFor="let expense of expenses" [ngSwitch]="expense.category">
+        <div>
+            {{expense}} <br>
+            {{expense | json}}
+        </div>
         <td>{{expense.itemName}}</td>
         <td *ngSwitchCase="'Drink'"><span class="badge bg-success">{{expense.category}}</span></td>
         <td *ngSwitchCase="'Juice'"><span class="badge bg-primary">{{expense.category}}</span></td>

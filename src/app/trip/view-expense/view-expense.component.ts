@@ -25,6 +25,7 @@ export class ViewExpenseComponent implements OnInit{
   }
 
   viewExpenseDetails(){  
+    
     this.userLgType = this.sessionService.getSession(GlobalConstant.userLgType) || "";
     this.apiService.getExpenseApi(this.sessionService.getUserSession()).subscribe(
       (response : any)=>{

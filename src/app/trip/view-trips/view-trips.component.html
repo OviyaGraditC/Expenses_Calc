@@ -1,3 +1,16 @@
 <p>view-trips works!</p>
 
 <a [routerLink]="'/addTrip'" class="btn btn-primary">Add Trip</a>
+
+
+<div>
+    {{str | lowercase}} <br>
+    {{str | uppercase}} <br>
+    {{ccy | currency: 'INR' }} <br>
+    {{ccy | currency: 'EUR' }} <br>
+    {{ccy | currency: 'USD' }} <br>
+    {{ currDt | date:'fullDate'}} <br>
+    {{ currDt | date:'short'}} <br>
+    {{ str | slice:2:5}} <br>
+    {{ num | powerPipe:2}}
+</div>

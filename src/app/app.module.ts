@@ -16,31 +16,33 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTripComponent } from './trip/add-trip/add-trip.component';
 import { ViewTripsComponent } from './trip/view-trips/view-trips.component';
+import { PowerPipe } from "./services/powerPipe";
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    LogoutComponent,
-    ForgotPswdComponent,
-    AddParticipantComponent,
-    RemoveParticipantComponent,
-    AddExpenseComponent,
-    ViewExpenseComponent,
-    AddTripComponent,
-    ViewTripsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        RegisterComponent,
+        LogoutComponent,
+        ForgotPswdComponent,
+        AddParticipantComponent,
+        RemoveParticipantComponent,
+        AddExpenseComponent,
+        ViewExpenseComponent,
+        AddTripComponent,
+        ViewTripsComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        PowerPipe
+    ]
 })
 export class AppModule { }
